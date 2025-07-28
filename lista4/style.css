@@ -1,0 +1,137 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --cor-primaria: #0077cc;
+  --cor-secundaria: #f0f0f0;
+  --cor-texto: #333;
+  --espacamento: 16px;
+  --fonte-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  font-family: var(--fonte-principal);
+  color: var(--cor-texto);
+  background-color: #ffffff;
+  line-height: 1.6;
+  padding: var(--espacamento);
+}
+
+header, main, footer {
+  margin-bottom: var(--espacamento);
+  padding: var(--espacamento);
+  border: 1px solid #ccc;
+  background-color: var(--cor-secundaria);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+header img {
+  border-radius: 50%;
+  max-width: 150px;
+  margin-bottom: var(--espacamento);
+}
+
+nav {
+  margin: var(--espacamento) 0;
+  display: flex;
+  gap: var(--espacamento);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--cor-primaria);
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  display: grid;
+  gap: var(--espacamento);
+}
+
+section {
+  background-color: #fff;
+  padding: var(--espacamento);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section::before {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 40px;
+  background-color: var(--cor-primaria);
+  margin-bottom: 8px;
+}
+
+h1, h2 {
+  color: var(--cor-primaria);
+}
+
+h2 {
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
+
+article {
+  font-style: italic;
+  background-color: #e6f7ff;
+  padding: var(--espacamento);
+  margin-top: var(--espacamento);
+}
+
+aside {
+  background-color: #f9f9f9;
+  padding: var(--espacamento);
+  border-left: 4px solid var(--cor-primaria);
+}
+
+footer {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #777;
+}
+
+li {
+    list-style-position: inside;
+}
+
+.destaque {
+  font-style: italic;
+  background-color: #ffffe0;
+}
+
+#importante {
+  border-top: 4px solid red;
+  padding-top: var(--espacamento);
+}
+
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+}
